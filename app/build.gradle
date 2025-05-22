@@ -11,14 +11,14 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "InfinityLoop1309.NewPipeEnhanced"
-        resValue "string", "app_name", "PipePipe"
+        applicationId "Manuel09.SuperPipeEnhanced"
+        resValue "string", "app_name", "SuperPipePipe"
         minSdk 21
         //noinspection ExpiredTargetSdkVersion
         targetSdk 33
         versionCode 1077
         versionName "4.4.0"
-        archivesBaseName = 'PipePipe_' + versionName
+        archivesBaseName = 'SuperPipePipe_' + versionName
 
         multiDexEnabled true
 
@@ -62,11 +62,11 @@ android {
             if (true) {
                 // default values when branch name could not be determined or is master or dev
                 applicationIdSuffix ".debug"
-                resValue "string", "app_name", "PipePipe Debug"
+                resValue "string", "app_name", "SuperPipePipe Debug"
             } else {
                 applicationIdSuffix ".debug." + normalizedWorkingBranch
-                resValue "string", "app_name", "PipePipe " + workingBranch
-                archivesBaseName = 'PipePipe_' + normalizedWorkingBranch
+                resValue "string", "app_name", "SuperPipePipe " + workingBranch
+                archivesBaseName = 'SuperPipePipe_' + normalizedWorkingBranch
             }
         }
 
@@ -76,8 +76,8 @@ android {
         release {
             if (System.properties.containsKey('packageSuffix')) {
                 applicationIdSuffix System.getProperty('packageSuffix')
-                resValue "string", "app_name", "PipePipe " + System.getProperty('packageSuffix')
-                archivesBaseName = 'PipePipe_' + System.getProperty('packageSuffix')
+                resValue "string", "app_name", "SuperPipePipe " + System.getProperty('packageSuffix')
+                archivesBaseName = 'SuperPipePipe_' + System.getProperty('packageSuffix')
             }
             minifyEnabled true
             shrinkResources false // disabled to fix F-Droid's reproducible build
