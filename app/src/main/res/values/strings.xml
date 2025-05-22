@@ -991,8 +991,8 @@
 <string name="sponsor_promote">Become a supporter</string>
 <string name="random_play_order_title">Random Order</string>
 <string name="random_play_order_summary">When using Music Player Mode, shuffle the playlist</string>
-<string name="update_log">### Bug Fixes\n- Cannot import data from NewPipe \n- Missing subtitles translations (YouTube) \n- Unexpected crash under certain conditions (YouTube)</string>
-<string name="speeding_playback_title">Long-press to speeding the playback</string>
+    <string name="update_log">### New Features\n- Support download full local playlist without size limit\n- Improve download stability\n- Add a setting to control whether to show full titles and comments by default\n\n### Bug Fixes\n- Titles are always translated to English (YouTube)\n- Live tabs are not enabled when migrated from NewPipe\n- Import from NewPipe failed under certain conditions \n- Batch download failed for audios (NicoNico)\n- Unexpected crash when download videos under certain conditions (BiliBili)\n- Note replies are not correctly parsed sometimes (BiliBili)\n\n### UI\n- Revert the change in 4.3.0 that use a larger grid item size on tablets\n- Improve comment reply UI \n- Remove "Recommended Podcasts"\n\n### Behavior\n- Disable bullet comments/live chats by default\n\n</string>
+    <string name="speeding_playback_title">Long-press to speeding the playback</string>
 <string name="view_on_github">View on GitHub</string>
 <string name="donation_dialog_title">Support the Project</string>
 <string name="donation_dialog_message">Thank you for using PipePipe! If you find it useful, please consider becoming a supporter on Ko-Fi. Your support is important to me and helps me add more exciting new features. Every bit counts! 😇</string>
@@ -1058,7 +1058,10 @@
 <string name="stream_processing_starting">Starting stream processing...</string>
 <string name="stream_processing_progress">Processing: %1$d/%2$d</string>
 <string name="stream_processing_failed_count">(Failed: %d)</string>
-    <string name="stream_processing_complete">Processing complete. Success: %1$d, Failed: %2$d, Skipped: %3$d</string>
+<string name="stream_processing_complete">Processing complete. Success: %1$d, Failed: %2$d, Skipped: %3$d</string>
 <string name="stream_processing_failed">Stream processing failed.</string>
 <string name="failed_streams">Failed Streams</string>
+<string name="auto_ellipsize_summary">Automatically shorten title and comments that is too long</string>
+<string name="auto_ellipsize_title">Auto Ellipsize</string>
+<string name="announcement">Announcement</string>
 </resources>
