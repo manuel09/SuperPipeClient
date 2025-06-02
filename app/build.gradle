@@ -80,23 +80,21 @@ android {
 
         buildTypes {
         release {
-            signingConfig signingConfigs.release
-
-        // Keep the release build type at the end of the list to override 'archivesBaseName' of
-        // debug build. This seems to be a Gradle bug, therefore
-        // TODO: update Gradle version
-            
-        release {
             if (System.properties.containsKey('packageSuffix')) {
                 applicationIdSuffix System.getProperty('packageSuffix')
                 resValue "string", "app_name", "SuperPipePipe " + System.getProperty('packageSuffix')
                 archivesBaseName = 'SuperPipePipe_' + System.getProperty('packageSuffix')
             }
-            minifyEnabled true
+            signingConfig signingConfigs.release
+            minifyEnabled false
             shrinkResources false // disabled to fix F-Droid's reproducible build
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+        // Keep the release build type at the end of the list to override 'archivesBaseName' of
+        // debug build. This seems to be a Gradle bug, therefore
+        // TODO: update Gradle version
 
     lint {
         checkReleaseBuilds false
