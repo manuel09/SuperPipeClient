@@ -8,6 +8,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        release {
+            storeFile file(project.hasProperty('releaseStoreFile') ? project.property('releaseStoreFile') : '')
+            storePassword project.hasProperty('releaseStorePassword') ? project.property('releaseStorePassword') : ''
+            keyAlias project.hasProperty('releaseKeyAlias') ? project.property('releaseKeyAlias') : ''
+            keyPassword project.hasProperty('releaseKeyPassword') ? project.property('releaseKeyPassword') : ''
+        }
+        
     compileSdk 33
 
     defaultConfig {
@@ -70,9 +78,14 @@ android {
             }
         }
 
+        buildTypes {
+        release {
+            signingConfig signingConfigs.release
+
         // Keep the release build type at the end of the list to override 'archivesBaseName' of
         // debug build. This seems to be a Gradle bug, therefore
         // TODO: update Gradle version
+            
         release {
             if (System.properties.containsKey('packageSuffix')) {
                 applicationIdSuffix System.getProperty('packageSuffix')
